@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iglesia Católica Anglicana – Comunidad de Fe</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ENCABEZADO -->
+  <header class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#inicio">Iglesia Católica Anglicana</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-label="Alternar navegación">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <nav class="collapse navbar-collapse justify-content-end" id="menu">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="#actividades">Actividades</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="inicio" class="hero d-flex align-items-center text-center text-white">
+    <div class="container">
+      <h1 class="display-4 fw-bold">Una comunidad de fe y esperanza</h1>
+      <p class="lead">Compartiendo el amor de Cristo con todos.</p>
+      <a href="#nosotros" class="btn btn-light btn-lg mt-3">Conócenos</a>
+    </div>
+  </section>
+
+  <!-- NOSOTROS -->
+  <main>
+    <section id="nosotros" class="py-5 bg-light text-center">
+      <div class="container">
+        <h2 class="fw-bold mb-4">Sobre Nosotros</h2>
+        <p class="mx-auto" style="max-width: 700px;">
+          Somos una iglesia que busca guiar a las personas hacia una relación profunda con Dios,
+          promoviendo el servicio, la comunión y la fe viva en Cristo.
+        </p>
+
+        <h3 class="mt-5">Nuestros Valores</h3>
+        <ul class="list-unstyled">
+          <li>🙏 Fe y esperanza</li>
+          <li>💞 Amor y servicio</li>
+          <li>🤝 Comunidad y solidaridad</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ACTIVIDADES -->
+    <section id="actividades" class="py-5">
+      <div class="container text-center">
+        <h2 class="fw-bold mb-4">Actividades Semanales</h2>
+
+        <!-- Tabla -->
+        <div class="table-responsive">
+          <table class="table table-striped table-bordered align-middle">
+            <thead class="table-dark">
+              <tr>
+                <th>Día</th>
+                <th>Actividad</th>
+                <th>Hora</th>
+                <th>Ubicación</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Lunes</td>
+                <td>Oración Matutina</td>
+                <td>7:00 a.m.</td>
+                <td>Capilla central</td>
+              </tr>
+              <tr>
+                <td>Lunes</td>
+                <td>Oración Vespertina</td>
+                <td>6:00 p.m.</td>
+                <td>Capilla central</td>
+              </tr>
+              <tr>
+                <td>Miércoles</td>
+                <td>Grupo juvenil</td>
+                <td>5:30 p.m.</td>
+                <td>Salón pastoral</td>
+              </tr>
+              <tr>
+                <td>Domingo</td>
+                <td>Santa Misa</td>
+                <td>10:00 a.m.</td>
+                <td>Templo principal</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Imagen -->
+        <img src="img/misa.jpg" alt="Celebración eucarística" class="img-fluid rounded shadow mt-4" style="max-width: 70%;">
+      </div>
+    </section>
+
+    <!-- MULTIMEDIA -->
+    <section id="multimedia" class="py-5 bg-light text-center">
+        <div class="container">
+            <h2 class="fw-bold mb-4">Galería Multimedia</h2>
+
+            <!-- Video de YouTube -->
+            <div class="ratio ratio-16x9 mb-4">
+            <iframe width="560" height="315"
+                src="https://www.youtube.com/embed/txmiZ5qJMQw?si=Lsuv0UM1GrB7K_M4"
+                title="Reproductor de video de YouTube"
+                style="border: none;"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+            </iframe>
+            </div>
+            <iframe data-testid="embed-iframe" style="border-radius:12px; border: none; width: 100%;" src="https://open.spotify.com/embed/track/6LXVqmgNShwKDBMAt5uXxo?utm_source=generator" height="152" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="py-5">
+      <div class="container">
+        <h2 class="text-center fw-bold mb-4">Contáctanos</h2>
+        <form class="mx-auto" style="max-width: 600px;">
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Escribe tu nombre" required autofocus autocomplete="name">
+          </div>
+          <div class="mb-3">
+            <label for="correo" class="form-label">Correo electrónico</label>
+            <input type="email" id="correo" name="correo" class="form-control" placeholder="ejemplo@correo.com" required autocomplete="email">
+          </div>
+          <div class="mb-3">
+            <label for="fecha" class="form-label">Fecha de visita</label>
+            <input type="date" id="fecha" name="fecha" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label for="mensaje" class="form-label">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4" class="form-control" placeholder="Escribe tu mensaje" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-dark w-100">Enviar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p class="mb-0">&copy; 2025 Iglesia Católica Anglicana. Todos los derechos reservados.</p>
+    <a href="#inicio" class="text-white d-block mt-2">Volver arriba ↑</a>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('fecha').value = new Date().toISOString().split('T')[0];
+  </script>
+</body>
+</html>

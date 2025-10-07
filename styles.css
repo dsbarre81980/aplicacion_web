@@ -1,0 +1,75 @@
+/* Fuente y comportamiento general */
+body {
+  font-family: "Segoe UI", Roboto, sans-serif;
+  scroll-behavior: smooth;
+  line-height: 1.6;
+}
+
+/* Hero principal */
+.hero {
+  background-image: url("img/iglesia_fondo.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.hero h1, .hero p {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Encabezado */
+.navbar-brand {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.nav-link {
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #f0b429 !important;
+}
+
+/* Secciones */
+section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+/* Botones */
+.btn {
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* Tablas */
+.table th {
+  text-transform: uppercase;
+}
+
+/* Listas */
+ul li {
+  margin: 5px 0;
+  font-weight: 500;
+}
+
+/* Footer */
+footer {
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .hero {
+    height: 80vh;
+  }
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+}

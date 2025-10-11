@@ -1,75 +1,80 @@
-/* Fuente y comportamiento general */
-body {
-  font-family: "Segoe UI", Roboto, sans-serif;
-  scroll-behavior: smooth;
-  line-height: 1.6;
+:root {
+  --color-primario: #ff3e53;
+  --color-secundario: #fd6331;
+  --color-oscuro: #212529;
+  --color-claro: #f8f9fa;
+  --fuente-principal: "Segoe UI", Roboto, sans-serif;
 }
 
-/* Hero principal */
+/* GENERAL */
+body {
+  font-family: var(--fuente-principal);
+  line-height: 1.6;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* HERO */
 .hero {
   background-image: url("img/iglesia_fondo.jpg");
   background-size: cover;
   background-position: center;
   height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .hero h1, .hero p {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-/* Encabezado */
-.navbar-brand {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.nav-link {
-  transition: color 0.3s;
-}
-
+/* NAVBAR */
 .nav-link:hover {
-  color: #f0b429 !important;
+  color: var(--color-secundario) !important;
+  transition: color 0.3s ease;
 }
 
-/* Secciones */
-section {
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
-
-/* Botones */
+/* BOTONES */
 .btn {
   border-radius: 0.5rem;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .btn:hover {
   transform: scale(1.05);
 }
 
-/* Tablas */
+/* TABLAS */
 .table th {
   text-transform: uppercase;
 }
 
-/* Listas */
-ul li {
-  margin: 5px 0;
-  font-weight: 500;
-}
-
-/* Footer */
+/* FOOTER */
 footer {
   font-size: 0.9rem;
   letter-spacing: 0.5px;
 }
 
-/* Responsivo */
-@media (max-width: 768px) {
+/* RESPONSIVO */
+@media (max-width: 992px) {
   .hero {
     height: 80vh;
   }
   .hero h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-brand {
+    font-size: 1rem;
+  }
+  footer {
+    font-size: 0.8rem;
   }
 }

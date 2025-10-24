@@ -29,12 +29,38 @@
     </div>
   </header>
 
-  <!-- HERO -->
+  <!-- HERO CON CARRUSEL -->
   <section id="inicio" class="hero d-flex align-items-center text-center text-white">
-    <div class="container">
-      <h1 class="display-4 fw-bold">Una comunidad de fe y esperanza</h1>
-      <p class="lead">Compartiendo el amor de Cristo con todos.</p>
-      <a href="#nosotros" class="btn btn-light btn-lg mt-3">Conócenos</a>
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="container">
+            <h1 class="display-4 fw-bold">Una comunidad de fe y esperanza</h1>
+            <p class="lead">Compartiendo el amor de Cristo con todos.</p>
+            <a href="#nosotros" class="btn btn-light btn-lg mt-3">Conócenos</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="container">
+            <h1 class="display-4 fw-bold">Únete a nuestra familia</h1>
+            <p class="lead">Encuentra tu lugar en nuestra comunidad de fe.</p>
+            <a href="#actividades" class="btn btn-light btn-lg mt-3">Ver Actividades</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="container">
+            <h1 class="display-4 fw-bold">Creciendo en la fe</h1>
+            <p class="lead">Acompáñanos en este camino espiritual.</p>
+            <a href="#contacto" class="btn btn-light btn-lg mt-3">Contáctanos</a>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
     </div>
   </section>
 
@@ -62,44 +88,12 @@
       <div class="container text-center">
         <h2 class="fw-bold mb-4">Actividades Semanales</h2>
 
-        <!-- Tabla -->
-        <div class="table-responsive">
-          <table class="table table-striped table-bordered align-middle">
-            <thead class="table-dark">
-              <tr>
-                <th>Día</th>
-                <th>Actividad</th>
-                <th>Hora</th>
-                <th>Ubicación</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Lunes</td>
-                <td>Oración Matutina</td>
-                <td>7:00 a.m.</td>
-                <td>Capilla central</td>
-              </tr>
-              <tr>
-                <td>Lunes</td>
-                <td>Oración Vespertina</td>
-                <td>6:00 p.m.</td>
-                <td>Capilla central</td>
-              </tr>
-              <tr>
-                <td>Miércoles</td>
-                <td>Grupo juvenil</td>
-                <td>5:30 p.m.</td>
-                <td>Salón pastoral</td>
-              </tr>
-              <tr>
-                <td>Domingo</td>
-                <td>Santa Misa</td>
-                <td>10:00 a.m.</td>
-                <td>Templo principal</td>
-              </tr>
-            </tbody>
-          </table>
+        <!-- Horarios Dinámicos -->
+        <div class="mt-5">
+          <h3 class="fw-bold mb-3">Horarios Detallados</h3>
+          <div id="horariosLista" class="alert alert-info">
+            <p class="mb-0">Cargando horarios...</p>
+          </div>
         </div>
 
         <!-- Imagen -->
@@ -131,7 +125,7 @@
     <section id="contacto" class="py-5">
       <div class="container">
         <h2 class="text-center fw-bold mb-4">Contáctanos</h2>
-        <form class="mx-auto" style="max-width: 600px;">
+        <form id="contactForm" class="mx-auto" style="max-width: 600px;">
           <div class="mb-3">
             <label for="nombre" class="form-label">Nombre completo</label>
             <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Escribe tu nombre" required autofocus autocomplete="name">
@@ -139,6 +133,10 @@
           <div class="mb-3">
             <label for="correo" class="form-label">Correo electrónico</label>
             <input type="email" id="correo" name="correo" class="form-control" placeholder="ejemplo@correo.com" required autocomplete="email">
+          </div>
+          <div class="mb-3">
+            <label for="fechaNacimiento" class="form-label">Fecha de nacimiento</label>
+            <input type="date" id="fechaNacimiento" name="fechaNacimiento" class="form-control" required>
           </div>
           <div class="mb-3">
             <label for="fecha" class="form-label">Fecha de visita</label>
@@ -150,6 +148,9 @@
           </div>
           <button type="submit" class="btn btn-dark w-100">Enviar</button>
         </form>
+        <div id="mensajeEnviado" class="alert alert-success mt-3" style="display: none;">
+          ¡Mensaje enviado exitosamente! Nos pondremos en contacto contigo pronto.
+        </div>
       </div>
     </section>
   </main>
@@ -161,8 +162,6 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    document.getElementById('fecha').value = new Date().toISOString().split('T')[0];
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
